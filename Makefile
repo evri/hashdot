@@ -6,14 +6,14 @@ JAVA_HOME?=$(realpath $(dir $(shell which java))/..)
 APR_CONFIG=$(shell which apr-1-config)
 
 # Install hashdot binaries to specified directory
-INSTALL_BIN=/opt/bin
+INSTALL_BIN=/evri/bin
 
 # The set of symlinks (from all below) to insall
-INSTALL_SYMLINKS = jruby
+INSTALL_SYMLINKS = jruby jruby-1.4 jruby-1.5
 
 # Where to install and find profiles (*.hdp)
 # export PROFILE_DIR=./profiles to work in source directory
-PROFILE_DIR?=/opt/hashdot/profiles
+PROFILE_DIR?=/evri/hashdot/profiles
 
 VERSION=1.4.0
 

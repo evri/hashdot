@@ -1,0 +1,34 @@
+# HashDot launch profile for JRuby (http://jruby.codehaus.org/)
+#. hashdot.profile = jruby
+
+jruby.home    = /evri/jruby-1.5.1
+jruby.lib     = ${jruby.home}/lib
+jruby.script  = jruby-1.5
+jruby.bindir  = /evri/bin
+jruby.shell   = /bin/sh
+
+# Identical defaults to jruby launcher
+# These can still be overridden by the individual scripts
+hashdot.vm.options += -Xmx500m -Xss1024k
+
+# Only jruby.jar is required for typical usage (scripts can require
+# bsf.jar or JIP profiler if desired).
+hashdot.vm.options += -Xbootclasspath/a:${jruby.lib}/jruby.jar
+
+hashdot.main = org.jruby.Main
+
+# Arguments following these flags are _not_ a script to scan for
+# hashdot headers.
+hashdot.parse_flags.value_args = -F -I -r
+
+# Give up looking for a script header with any of these
+hashdot.parse_flags.terminal = -C -e -S
+
+
+# RubyGems HOME
+# This moves gem home out of the jruby dist and thus avoid needing to
+# reinstall gems on upgrade.
+jruby.gem.home = /evri/jgems
+
+# JFFI
+jffi.boot.library.path = ${jruby.home}/lib/native/i686-Linux
