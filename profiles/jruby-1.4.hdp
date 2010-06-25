@@ -33,4 +33,4 @@ hashdot.env.GEM_PATH = ${hashdot.env.GEM_HOME}:${hashdot.user.home}/.gem/jruby/1
 # jruby.native.enabled = false
 
 #JFFI
-jffi.boot.library.path = ${jruby.home}/lib/native/i386-Linux #x86_64
+jffi.boot.library.path = ${jruby.home}/lib/native/x86_64-Linux #or: i386

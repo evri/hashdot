@@ -12,7 +12,7 @@ hashdot.vm.home = /evri/java
 
 # For Linux: amd64, i386, etc.
 # Unused on Mac OS X
-hashdot.vm.arch = i386
+hashdot.vm.arch = amd64
 
 # Mode: client, server
 # client is unavailable on platforms like Linux amd64

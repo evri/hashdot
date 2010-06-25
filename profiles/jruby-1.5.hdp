@@ -30,4 +30,4 @@ hashdot.parse_flags.terminal = -C -e -S
 jruby.gem.home = /evri/jgems
 
 # JFFI
-jffi.boot.library.path = ${jruby.home}/lib/native/i386-Linux #x86_64
+jffi.boot.library.path = ${jruby.home}/lib/native/x86_64-Linux #or: i386
