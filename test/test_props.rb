@@ -59,7 +59,7 @@ class TestProperties < Test::Unit::TestCase
   end
 
   def test_profile_append
-    assert_prop( "hashdot.profile", "shortlived jruby jruby-shortlived" )
+    assert_prop( "hashdot.profile", "jruby-common jruby shortlived jruby-shortlived" )
   end
 
   def test_glob_class_path
