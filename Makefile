@@ -1,6 +1,6 @@
 # JDK used for compiling, a different one can be set at runtime,
 # see profiles/default.hdp
-JAVA_HOME?=$(realpath $(dir $(shell which java))/..)
+JAVA_HOME=/evri/jdk-ora-1.6.0_32-linux-amd64
 
 # Dependent on apache portable runtime (apr-devel-1.x apr-1.x)
 APR_CONFIG=$(shell which apr-1-config)
@@ -8,7 +8,7 @@ APR_CONFIG=$(shell which apr-1-config)
 # Install hashdot binaries to specified directory
 INSTALL_BIN=/evri/bin
 
-# The set of symlinks (from all below) to insall
+# The set of symlinks (from all below) to install
 INSTALL_SYMLINKS = jruby jruby-1.4 jruby-1.5
 
 # Where to install and find profiles (*.hdp)
@@ -24,10 +24,11 @@ CFLAGS=$(shell ${APR_CONFIG} --cflags --cppflags --includes) -O2 -Wall -fno-stri
 -DHASHDOT_PROFILE_DIR=\"${PROFILE_DIR}\" \
 -DHASHDOT_VERSION=\"${VERSION}\"
 
+LDFLAGS=$(shell ${APR_CONFIG} --ldflags)
+
 # Override platform default (i.e. Mac defaults x32)
 # LDFLAGS += -m64
 
-LDFLAGS=$(shell ${APR_CONFIG} --ldflags)
 LDLIBS=$(shell ${APR_CONFIG} --libs --link-ld)
 
 ALL_SYMLINKS = clj jruby jython groovy rhino scala
