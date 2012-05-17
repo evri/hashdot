@@ -25,7 +25,7 @@ hashdot.vm.mode = server
 hashdot.vm.lib := ${hashdot.vm.home}/jre/lib/${hashdot.vm.arch}/${hashdot.vm.mode}/libjvm.so
 # Mac: hashdot.vm.lib := ${hashdot.vm.home}/Libraries/lib${hashdot.vm.mode}.dylib
 
-hashdot.env.TZ = "America/Los_Angeles"
+user.timezone = America/Los_Angeles
 
 # Java native library extensions (ImageIO, etc.)
 hashdot.vm.libpath += /evri/jlib/lib

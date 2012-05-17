@@ -3,7 +3,7 @@
 
 # Extends shortlived (client VM) and (jruby) profiles with further
 # startup time tweeks.
-hashdot.profile = shortlived jruby
+hashdot.profile += jruby shortlived
 
 # JMX setup slows startup and wont be used
 jruby.management.enabled=false
